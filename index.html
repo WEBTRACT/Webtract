@@ -3,44 +3,106 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Webtract | Websites That Move Businesses Forward</title>
-  <meta name="description" content="Webtract builds modern, fast, professional websites for South African businesses. Website development, design and ongoing maintenance. Chat to us on WhatsApp.">
+  <title>Webtract | Web Design &amp; Development in South Africa</title>
+  <meta name="description" content="Webtract builds fast, modern, professional websites for businesses across South Africa. Web design, development and maintenance. Chat on WhatsApp.">
   <meta name="google-site-verification" content="yJoIwcxtoQ9o8DWlanaNsFN52SLWIHz8VEXO387WQU8">
+  <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#2A2C30">
   <link rel="canonical" href="https://webtract.pages.dev/">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Webtract">
   <meta property="og:locale" content="en_ZA">
-  <meta property="og:title" content="Webtract | Websites That Move Businesses Forward">
-  <meta property="og:description" content="Modern, professional websites for South African businesses. Chat to us on WhatsApp.">
+  <meta property="og:title" content="Webtract | Web Design &amp; Development in South Africa">
+  <meta property="og:description" content="Fast, modern websites for South African businesses. Chat to us on WhatsApp.">
   <meta property="og:url" content="https://webtract.pages.dev/">
   <meta property="og:image" content="https://webtract.pages.dev/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Webtract logo with the words Websites built to move businesses">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Webtract | Websites That Move Businesses Forward">
-  <meta name="twitter:description" content="Modern, professional websites for South African businesses.">
+  <meta name="twitter:title" content="Webtract | Web Design &amp; Development in South Africa">
+  <meta name="twitter:description" content="Fast, modern websites for South African businesses. Chat to us on WhatsApp.">
   <meta name="twitter:image" content="https://webtract.pages.dev/og-image.png">
+  <meta name="twitter:image:alt" content="Webtract logo with the words Websites built to move businesses">
 
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon.png" type="image/png" sizes="48x48">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-  <script src="boot.js"></script>
-  <link rel="stylesheet" href="style.css">
+  <script src="/boot.js"></script>
+  <link rel="stylesheet" href="/style.css">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Webtract",
-    "description": "Website development, design and maintenance for South African businesses.",
-    "url": "https://webtract.pages.dev/",
-    "telephone": "+27786350274",
-    "areaServed": "ZA",
-    "sameAs": ["https://www.instagram.com/webtract_co/"]
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://webtract.pages.dev/#website",
+        "url": "https://webtract.pages.dev/",
+        "name": "Webtract",
+        "inLanguage": "en-ZA",
+        "publisher": {
+          "@id": "https://webtract.pages.dev/#business"
+        }
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://webtract.pages.dev/#business",
+        "name": "Webtract",
+        "description": "Web design, website development and website maintenance for businesses across South Africa.",
+        "url": "https://webtract.pages.dev/",
+        "image": "https://webtract.pages.dev/og-image.png",
+        "logo": "https://webtract.pages.dev/apple-touch-icon.png",
+        "telephone": "+27786350274",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "ZA"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "South Africa"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+27786350274",
+          "contactType": "customer service",
+          "areaServed": "ZA",
+          "availableLanguage": "English"
+        },
+        "sameAs": [
+          "https://www.instagram.com/webtract_co/"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Web services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Website development"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Website design"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Website maintenance"
+              }
+            }
+          ]
+        }
+      }
+    ]
   }
   </script>
 </head>
@@ -54,7 +116,7 @@
   </svg>
 
   <!-- Intro animation -->
-  <div class="loader" id="loader" aria-hidden="true">
+  <div class="loader" id="loader" aria-hidden="true" data-nosnippet>
     <canvas class="loader-canvas" id="loader-canvas"></canvas>
     <div class="p p-top">
       <div class="loader-top">
@@ -62,12 +124,12 @@
           <path class="w-main" pathLength="1" d="M8 14L36 68L60 28L84 68L112 14"/>
           <path class="w-head" pathLength="1" d="M90 14H112V36"/>
         </svg>
-        <div class="loader-word" data-text="WEBTRACT">WEBTRACT</div>
+        <div class="loader-word" data-text="WEBTRACT"></div>
       </div>
     </div>
     <div class="p p-bot">
       <p class="loader-tag">Websites built to move businesses</p>
-      <div class="loader-count" id="loader-count">000</div>
+      <div class="loader-count" id="loader-count"></div>
     </div>
   </div>
 
@@ -75,7 +137,7 @@
 
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="index.html" aria-label="Webtract home">
+      <a class="brand" href="/" aria-label="Webtract home">
         <svg aria-hidden="true"><use href="#mark"/></svg>
         <span>Webtract</span>
       </a>
@@ -84,7 +146,7 @@
         <a href="#services">Services</a>
         <a href="#how-it-works">How it works</a>
         <a href="#faq">FAQ</a>
-        <a href="contact.html">Contact</a>
+        <a href="/contact">Contact</a>
         <a class="nav-cta" href="https://wa.me/27786350274" target="_blank" rel="noopener">WhatsApp us</a>
       </nav>
     </div>
@@ -221,6 +283,10 @@
         <h2 class="section-title">Questions we get asked</h2>
         <div class="faq-list">
           <details>
+            <summary>Do you build websites for businesses anywhere in South Africa?</summary>
+            <p>Yes. We build websites for businesses in every province of South Africa. Message us on WhatsApp to get started.</p>
+          </details>
+          <details>
             <summary>How much does a website cost?</summary>
             <p>It depends on how many pages you need and what the site must do. Message us on WhatsApp, tell us about your business, and we'll give you a clear quote.</p>
           </details>
@@ -264,24 +330,24 @@
     <div class="wrap">
       <div class="foot">
         <div>
-          <a class="brand" href="index.html"><svg aria-hidden="true"><use href="#mark"/></svg><span>Webtract</span></a>
+          <a class="brand" href="/"><svg aria-hidden="true"><use href="#mark"/></svg><span>Webtract</span></a>
           <p>Websites built to move businesses.<br>South Africa</p>
           <a class="social" href="https://www.instagram.com/webtract_co/" target="_blank" rel="noopener" aria-label="Webtract on Instagram"><svg aria-hidden="true"><use href="#ig"/></svg></a>
         </div>
         <div>
           <h2>Explore</h2>
           <ul>
-            <li><a href="index.html#services">Services</a></li>
-            <li><a href="index.html#how-it-works">How it works</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="/#services">Services</a></li>
+            <li><a href="/#how-it-works">How it works</a></li>
+            <li><a href="/contact">Contact</a></li>
           </ul>
         </div>
         <div>
           <h2>Get in touch</h2>
           <ul>
             <li><a href="https://wa.me/27786350274" target="_blank" rel="noopener">WhatsApp +27 78 635 0274</a></li>
-            <li><a href="privacy.html">Privacy policy</a></li>
-            <li><a href="terms.html">Terms &amp; conditions</a></li>
+            <li><a href="/privacy">Privacy policy</a></li>
+            <li><a href="/terms">Terms &amp; conditions</a></li>
           </ul>
         </div>
       </div>
@@ -289,6 +355,6 @@
     </div>
   </footer>
 
-  <script src="main.js" defer></script>
+  <script src="/main.js" defer></script>
 </body>
 </html>
